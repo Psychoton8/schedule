@@ -1,4 +1,4 @@
-package main.java;
+package com.example;
 
 public class Training {
     private TrainingType type;
@@ -14,11 +14,13 @@ public class Training {
     }
 
     public void displayInfo() {
-        System.out.println("Тип: " + type);
-        System.out.println("Место: " + place);
-        System.out.println("Цена: " + price);
+        System.out.println("Type: " + type);
+        System.out.println("Place: " + place);
+        System.out.println("Price: " + price);
         if (type == TrainingType.PERSONAL && client != null) {
-            System.out.println("Клиент: " + client.getName() + ", " + client.getPhone() + ", " + client.getEmail());
+            System.out.println("Client: " + client.getName() + ", " + client.getPhone() + ", " +
+                    client.getEmail() + ", " + client.getAmount());
+            System.out.println(("Sessions left: " + client.getSessionsRemaining()));
         }
     }
 
